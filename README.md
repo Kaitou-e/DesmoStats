@@ -13,3 +13,6 @@ The spreadsheet supports formulas, drag-and-fill, and importing/exporting CSV, J
 The project began with the goal of making statistics tools accessible to students, especially AP Statistics students. A dedicated TI-Nspire mode mirrors the calculator used for the exam and in-class, matching its menus, inputs, outputs, and terminology.
 
 The long-term vision is to grow this foundation into a higher-level statistics calculator, starting from these core features.
+
+## Contact
+Email: desmostats@gmail.com
