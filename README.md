@@ -13,7 +13,7 @@ The spreadsheet supports formulas, drag-and-fill, and importing/exporting CSV, J
 - Plots and graphs
 - Linear regression and residuals
 
-![Example of TI style result.](docs/img/resultexample.png)
+<img src="docs/img/resultexample.png" width="49%"/>
 
 The project began with the goal of making statistics tools accessible to students, especially AP Statistics students. A dedicated TI-Nspire mode mirrors the calculator used for the exam and in-class, matching its menus, inputs, outputs, and terminology.
 
