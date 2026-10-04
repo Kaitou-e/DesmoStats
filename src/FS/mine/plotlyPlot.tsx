@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 declare global {
   interface Window {
-    Plotly?: typeof import('plotly.js');
+    Plotly?: typeof import("plotly.js");
   }
 }
 
@@ -17,11 +17,18 @@ const PlotlyChart: React.FC<PlotlyChartProps> = ({ data, layout }) => {
   useEffect(() => {
     const initializePlot = () => {
       if (chartRef.current && window.Plotly) {
-        window.Plotly.newPlot(chartRef.current, data, layout, {
+        const plotData = structuredClone(data);
+        const plotLayout = structuredClone(layout);
+
+        window.Plotly.newPlot(chartRef.current, plotData, plotLayout, {
           responsive: true,
-          autosizable: true,
-          displayModeBar: false
+          displayModeBar: false,
         });
+        // window.Plotly.newPlot(chartRef.current, data, layout, {
+        //   responsive: true,
+        //   autosizable: true,
+        //   displayModeBar: false
+        // });
       }
     };
 
@@ -30,7 +37,7 @@ const PlotlyChart: React.FC<PlotlyChartProps> = ({ data, layout }) => {
       initializePlot();
     } else {
       // Listen for script load event from HTML
-      window.addEventListener('plotly-loaded', initializePlot);
+      window.addEventListener("plotly-loaded", initializePlot);
     }
 
     return () => {
@@ -38,15 +45,14 @@ const PlotlyChart: React.FC<PlotlyChartProps> = ({ data, layout }) => {
       if (chartRef.current && window.Plotly) {
         window.Plotly.purge(chartRef.current);
       }
-      window.removeEventListener('plotly-loaded', initializePlot);
+      window.removeEventListener("plotly-loaded", initializePlot);
     };
   }, [data, layout]);
 
-  return <div ref={chartRef} style={{ width: '100%' }} />;
+  return <div ref={chartRef} style={{ width: "100%" }} />;
 };
 
 export default PlotlyChart;
- 
 
 // import React from 'react';
 // import Plot from 'react-plotly.js';
@@ -130,7 +136,5 @@ export default PlotlyChart;
 // };
 //
 // export default PlotlyScatterChart;
- 
 
 // export default ScatterChart;
- 
