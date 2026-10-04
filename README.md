@@ -1,4 +1,7 @@
 # DesmoStats
+
+<img src="docs/img/menu1.png" width="49%"/> <img src="docs/img/spreadsheet.png" width="49%"/>
+
 ## About
 DesmoStats is a free, login-less online statistics calculator built around a fully functional spreadsheet. Data is entered in a familiar table format, while statistical tools are accessed through structured menus, similar to desktop software like JMP.
 
@@ -9,6 +12,8 @@ The spreadsheet supports formulas, drag-and-fill, and importing/exporting CSV, J
 - Hypothesis tests
 - Plots and graphs
 - Linear regression and residuals
+
+![Example of TI style result.](docs/img/resultexample.png)
 
 The project began with the goal of making statistics tools accessible to students, especially AP Statistics students. A dedicated TI-Nspire mode mirrors the calculator used for the exam and in-class, matching its menus, inputs, outputs, and terminology.
 
